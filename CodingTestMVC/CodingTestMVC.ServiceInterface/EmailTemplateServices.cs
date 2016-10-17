@@ -11,6 +11,11 @@ namespace CodingTestMVC.ServiceInterface
 {
     public class EmailTemplateServices : Service
     {
+        /// <summary>
+        /// Get email templates based on request parameters
+        /// </summary>
+        /// <param name="request">Request parameters</param>
+        /// <returns>EmailTemplatesResponse</returns>
         public object Get(GetEmailTemplates request)
         {
             EmailTemplatePageCriteria pageCriteria = new EmailTemplatePageCriteria();

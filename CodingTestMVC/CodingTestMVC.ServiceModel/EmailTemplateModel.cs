@@ -8,6 +8,9 @@ using Modules.Config;
 
 namespace CodingTestMVC.ServiceModel
 {
+    /// <summary>
+    /// Get email templates request
+    /// </summary>
     [Route("/email/templates", "GET")]
     public class GetEmailTemplates : IReturn<EmailTemplatesResponse>
     {
@@ -16,6 +19,9 @@ namespace CodingTestMVC.ServiceModel
         public int Page { get; set; }
     }
 
+    /// <summary>
+    /// Email templates response
+    /// </summary>
     public class EmailTemplatesResponse
     {
         public EmailTemplates templates { get; set; }

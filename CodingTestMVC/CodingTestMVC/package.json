@@ -6,7 +6,10 @@
   "author": "",
   "private": true,
   "license": "",
-  "repository": {},
+  "repository": { },
+  "scripts": {
+    "test": "karma start tests/karma.conf.js"
+  },
   "dependencies": {
     "angular": "~1.5.0",
     "angular-loader": "~1.5.0",

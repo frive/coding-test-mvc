@@ -10,8 +10,6 @@
 
   module.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', { templateUrl: '/partials/email/email.html', controller: 'emailCtrl' });
-    $routeProvider.when('/view1', { templateUrl: '/partials/partial1.html' });
-    $routeProvider.when('/view2', { templateUrl: '/partials/partial2.html' });
     $routeProvider.when('/404', { templateUrl: '/partials/404.html' });
     $routeProvider.otherwise({ redirectTo: '/404' });
 

@@ -1,0 +1,9 @@
+<div>
+  <table ng-table="tblEmail" class="table table-bordered table-striped">
+    <tr ng-repeat="row in $data">
+      <td data-title="'Email Label'" sortable="'EmailLabel'">{{row.EmailLabel}}</td>
+      <td data-title="'From Address'" sortable="'FromAddress'">{{row.FromAddress}}</td>
+      <td data-title="'Date Updated'" sortable="'DateUpdated'">{{row.DateUpdated}}</td>
+    </tr>
+  </table>
+</div>

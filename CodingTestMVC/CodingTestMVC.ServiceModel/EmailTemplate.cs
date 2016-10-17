@@ -135,7 +135,7 @@ namespace Modules.Business
         public string TemplateText { get; set; }
         public Config.EmailType EmailType { get; set; }
         public bool Active { get; set; }
-        public DateTime DateUpdated { get; set; }
+        public string DateUpdated { get; set; }
         public bool LoadDrafts { get; set; }
         public Guid ParentId { get; set; }
         public int VersionCount { get; set; }
@@ -382,8 +382,9 @@ namespace Modules.Business
                 EmailTemplates allTemplates = (EmailTemplates)HttpContext.Current.Cache["EmailTemplatesData"];
                 if (allTemplates == null)
                 {
-                    
-                    string fileName = ConfigurationManager.AppSettings["DataPath"].Replace("~", HostingEnvironment.ApplicationPhysicalPath).Replace("/", "\\");
+
+                    //string fileName = ConfigurationManager.AppSettings["DataPath"].Replace("~", HostingEnvironment.ApplicationPhysicalPath).Replace("/", "\\");
+                    string fileName = HttpContext.Current.Server.MapPath(ConfigurationManager.AppSettings["DataPath"]);
                     XmlSerializer serializer = new XmlSerializer(typeof(EmailTemplates));
                     FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
                     allTemplates = (EmailTemplates)serializer.Deserialize(fs);

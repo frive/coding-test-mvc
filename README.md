@@ -1,9 +1,10 @@
 # Technologies
 
 ## Backend
-* ServiceStack 4
+* [ServiceStack 4](https://github.com/ServiceStack/ServiceStackVS/blob/master/docs/angular-spa.md)
 * .NET Framework 4.5.2
 * C#
+
 
 ## Frontend
 * AngularJS 1.5.0
